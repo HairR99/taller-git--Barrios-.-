@@ -1,0 +1,32 @@
+# 1. Usamos el comando:
+git status 
+
+#2. Verificamos que tipo de archivo es:
+
+.(Archivos en staging): son de color (verde) por lo que usaremos el comando: added
+git config --global color.status.added "aqui colocamos el tipo de color que queramos" ejemplo "blue"
+ 
+.(Archivos modificados no preparados): son de color (rojo) para este usaremos el comando: changed
+git config --global color.status.changed "magenta"
+
+
+.(Archivos nuevos): son de color (rojo pero un tono distinto), Git lo diferencia por la seccion en la que los muestra ale ejecutar git status
+para este usaremos el comando: untracked
+
+git config --global color.status.untracked "yellow"
+
+
+#3 Para resetear todos los colores de fabrica:
+
+git config --global --unset color.status.added
+git config --global --unset color.status.changed
+git config --global --unset color.status.untracked
+git config --global --unset color.ui
+
+
+
+						
+
+
+
+
