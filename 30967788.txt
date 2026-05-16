@@ -1,0 +1,29 @@
+{
+    // Declaracion de la matriz 
+    VAR [][]int estacionamiento = {
+        {0, 1, 0, 1}, // Fila 0
+        {1, 0, 0, 0}, // Fila 1
+        {0, 0, 1, 1}, // Fila 2
+        {1, 1, 0, 0}, // Fila 3
+        {0, 1, 1, 0}  // Fila 4
+    };
+
+    // Simulacion de las entradas del usuario
+    VAR fila = 2;
+    VAR columna = 1;
+
+    // VALIDACIÓN 1 Y 2: La fila y la columna existen en la matriz?
+    IF (fila >= 0 AND fila < tam(estacionamiento) AND columna >= 0 AND columna < tam(estacionamiento[0])) {
+        
+        // VALIDACIÓN 3: Si los rangos son validos, miramos que hay adentro de esa posición
+        IF (estacionamiento[fila][columna] == 0) {
+            PRINT(0); // El puesto esta libre
+        } ELSE {
+            PRINT(1); // Ocupado
+        }
+
+    } ELSE {
+        // Si la fila o la columna estaban fuera de rango (ej: fila 5 o columna -1)
+        PRINT(-1); // Error: Fila 5 y -1 no existe
+    }
+}
